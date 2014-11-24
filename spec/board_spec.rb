@@ -1,5 +1,7 @@
 require 'tictactoe_j8th/board'
 
+include TictactoeJ8th
+
 def fill_board
   9.times { |i| board.place(:X, i) }
 end

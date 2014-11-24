@@ -2,6 +2,8 @@ require 'tictactoe_j8th/game'
 require 'tictactoe_j8th/board'
 require 'tictactoe_j8th/ai'
 
+include TictactoeJ8th
+
 def count_tokens(player, board)
   tokens = []
   (0..Board::BOARD_SIZE).each do |i|

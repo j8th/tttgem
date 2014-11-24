@@ -2,6 +2,8 @@ require 'tictactoe_j8th/board'
 require 'tictactoe_j8th/game'
 require 'tictactoe_j8th/ai'
 
+include TictactoeJ8th
+
 describe 'AI' do
 
   let(:board) { Board.new }
