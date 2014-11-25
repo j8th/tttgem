@@ -57,6 +57,25 @@ module TictactoeJ8th
       copy
     end
 
+    def to_s
+      string = ''
+      board.each do |spot|
+        string += spot.nil? ? 'E' : spot.to_s
+      end
+      string
+    end
+
+    ###############################
+    # Public Class Methods
+    ###############################
+    def self.from_s(string)
+      board = Board.new
+      (0..BOARD_SIZE-1).each do |i|
+        board.place(string[i].to_sym, i)
+      end
+      board
+    end
+
     private
     attr_accessor :board
   end

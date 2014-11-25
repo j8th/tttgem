@@ -82,4 +82,24 @@ describe Board do
       )
     end
   end
+
+  context '#to_s' do
+    it 'returns a string representation of the board.' do
+      board.place(:X, 0)
+      board.place(:O, 3)
+      board.place(:X, 2)
+
+      expect(board.to_s).to eq('XEXOEEEEE')
+    end
+  end
+
+  context '#from_s' do
+    it 'returns a board from a string' do
+      string = 'XEXOEEEEE'
+      board = Board::from_s(string)
+      (0..Board::BOARD_SIZE-1).each do |i|
+        expect(board[i].to_s).to eq(string[i])
+      end
+    end
+  end
 end
