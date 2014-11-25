@@ -23,8 +23,10 @@ Or install it yourself as:
 Everything is in a TictactoeJ8th module.
 You get Game, Board, Human, and AI.
 
+```ruby
 include TictactoeJ8th
 Game.new(Board.new, Human.new(:X), AI.new(:O))
+```
 
 ## Contributing
 
