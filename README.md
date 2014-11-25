@@ -1,6 +1,6 @@
 # TictactoeJ8th
 
-TODO: Write a gem description
+A gem encapsulating the logic of a tic tac toe game with an unbeatable AI.
 
 ## Installation
 
@@ -20,7 +20,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Everything is in a TictactoeJ8th module.
+You get Game, Board, Human, and AI.
+
+include TictactoeJ8th
+Game.new(Board.new, Human.new(:X), AI.new(:O))
 
 ## Contributing
 
