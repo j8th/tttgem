@@ -71,7 +71,7 @@ module TictactoeJ8th
     def self.from_s(string)
       board = Board.new
       (0..BOARD_SIZE-1).each do |i|
-        board.place(string[i].to_sym, i)
+        board.place(string[i].to_sym, i) unless string[i] == 'E'
       end
       board
     end

@@ -98,7 +98,11 @@ describe Board do
       string = 'XEXOEEEEE'
       board = Board::from_s(string)
       (0..Board::BOARD_SIZE-1).each do |i|
-        expect(board[i].to_s).to eq(string[i])
+        if string[i] == 'E'
+          expect(board[i]).to be_nil
+        else
+          expect(board[i].to_s).to eq(string[i])
+        end
       end
     end
   end
