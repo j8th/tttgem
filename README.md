@@ -24,6 +24,8 @@ Everything is in a TictactoeJ8th module.
 You get Game, Board, Human, and AI.
 
 ```ruby
+require 'tictactoe_j8th'
+
 include TictactoeJ8th
 Game.new(Board.new, Human.new(:X), AI.new(:O))
 ```
